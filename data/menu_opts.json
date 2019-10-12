@@ -15,6 +15,16 @@
             "ruta" : "card",
             "icon" : "folder_open",
             "texto": "Cards - Tarjetas"
+        },
+        {
+            "ruta" : "animatedContainer",
+            "icon" : "folder_open",
+            "texto": "container animado"
+        },
+        {
+            "ruta" : "inputs",
+            "icon" : "folder_open",
+            "texto": "Ejemplos de inputs"
         }
     ]
 }
