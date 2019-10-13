@@ -11,7 +11,10 @@ class _InputViewState extends State<InputView> {
   String _email;
   String _password;
   String _fecha;
+  String _opcionSeleccionada = 'volar';
+
   TextEditingController _inputField = new TextEditingController();
+  List<String> _poderes = ['volar','fuego','rayo','chakra'];
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +29,9 @@ class _InputViewState extends State<InputView> {
           Divider(),
           _crearPassword(),
           Divider(),
-          _crearFecha(context)
+          _crearFecha(context),
+          Divider(),
+          _crearDrowndown()
         ]
       ),
     );
@@ -116,5 +121,33 @@ class _InputViewState extends State<InputView> {
         _inputField.text = _fecha;
       });
     }
+  }
+
+  List<DropdownMenuItem<String>> _getPoderes() {
+    return _poderes.map((poder){
+      return DropdownMenuItem(
+        child: Text(poder),
+        value: poder,
+      );
+    }).toList();
+  }
+
+  Widget _crearDrowndown() {
+    return Row(
+      children: <Widget>[
+        Icon(Icons.select_all),
+        SizedBox(width: 30.0),
+        DropdownButton(
+          value: _opcionSeleccionada,
+          items: _getPoderes(),
+          onChanged: (valor){
+            setState(() {
+              _opcionSeleccionada = valor;
+            });
+            print(valor);
+          },
+        ),
+      ],
+    );
   }
 }

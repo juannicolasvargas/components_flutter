@@ -25,6 +25,16 @@
             "ruta" : "inputs",
             "icon" : "folder_open",
             "texto": "Ejemplos de inputs"
+        },
+        {
+            "ruta" : "slider",
+            "icon" : "folder_open",
+            "texto": "Ejemplos de slider"
+        },
+        {
+            "ruta" : "list",
+            "icon" : "folder_open",
+            "texto": "Ejemplos de list builder"
         }
     ]
 }
